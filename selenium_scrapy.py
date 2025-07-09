@@ -70,7 +70,6 @@ for item in main_data:
             except Exception as e:
                 print(f"Error extracting block: {e}")
 
-
         dumps.append(data)
 
     except Exception as e:
