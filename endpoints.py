@@ -21,7 +21,7 @@ async def get_specific_product(product_name: str):
     raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")
 
 
-@app.get("/products/{product_name}/{product_field}/", status_code=status.HTTP_200_OK)
+@app.get("/products/{product_name}/{product_field}", status_code=status.HTTP_200_OK)
 async def retrieve_specific_product_field(product_name: str, product_field: str):
     for product in products:
         if product_name.lower() in product["name"].lower():
